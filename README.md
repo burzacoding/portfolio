@@ -9,7 +9,7 @@ Este proyecto fué creado con las siguientes herramientas y tecnologías:
 -Figma\
 -Git\
 -TypeScript\
--React\
+-React
 
 ## ¿Cómo se creó?
 
@@ -18,6 +18,6 @@ Este proyecto fué creado con las siguientes herramientas y tecnologías:
 3_ Se definió la estructura de carpetas, se crearon los componentes siguiendo el sistema de diseño presente en el mockup.\
 Tenga en cuenta que yo al ser el desarrollador soy capaz de ver tipografía, color, tamaño, espaciado, altura de linea, centrado, etc. de todos los componentes del mockup.\
 4_ Se implementaron animaciones y javascript.\
-5_ Se desplegó usando Vercel.\
+5_ Se desplegó usando Vercel.
 
 
