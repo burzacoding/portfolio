@@ -1,9 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Button from './Components/Molecules/Button';
 
 function App() {
-  return ()
+  return (
+    <div>
+      <h1>Hola mundo</h1>
+      <Button path='/' text="Curriculum"  /> 
+    </div>
+  )
 }
 
 export default App;
+ 
