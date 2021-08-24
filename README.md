@@ -1,6 +1,6 @@
 # Portfolio de Cesar Elias Pintos
 
-Hola! Este repositorio se encuentra desplegado [aquí](https://www.youtube.com).
+Hola! Este repositorio se encuentra desplegado [aquí](https://burzacoding.com).
 
 ## ¿Con qué se creó?
 
