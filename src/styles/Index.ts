@@ -5,6 +5,6 @@ export const BaseLink = styled(Link)`
   color: black;
   text-decoration: none;
   &:visited {
-    color: black;
+    color: initial;
   }
 `;
