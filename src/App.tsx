@@ -1,13 +1,18 @@
-import Button from './Components/Molecules/Button';
+import Nav from "./Components/Organisms/Nav";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./Styles";
+import { EllipseWrapper } from "./styles/Ellipse";
+import Ellipse from "./Components/Molecules/Ellipse";
 
 function App() {
   return (
-    <div>
-      <h1>Hola mundo</h1>
-      <Button path='/' text="Curriculum"  /> 
-    </div>
-  )
+    <ThemeProvider theme={theme}>
+      <EllipseWrapper size={240}>
+        <Ellipse />
+      </EllipseWrapper>
+      <Nav />
+    </ThemeProvider>
+  );
 }
 
 export default App;
- 
