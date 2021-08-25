@@ -21,21 +21,21 @@ const ButtonStyled = styled.button<ButtonProps>`
   height: ${(p) => p.height + "px"};
   background-color: transparent;
   border-radius: 8px;
-  border: 2px solid #c08c8c;
+  border: 2px solid ${p => p.theme.lightblue};
   transform-origin: 50% 50%;
   transition: transform 0.2s;
   font-size: ${(p) => p.fontSize + "px"};
   cursor: pointer;
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.025);
   }
 `;
 
 const Link = styled(BaseLink)`
-  color: #c08c8c;
+  color: ${p => p.theme.lightblue};
   font-weight: 500;
   &:visited {
-    color: #c08c8c;
+    color: ${p => p.theme.lightblue};
   }
 `;
 

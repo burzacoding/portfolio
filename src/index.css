@@ -6,5 +6,28 @@
 }
 
 body {
-  background-color: #120D0D;
+  background-color: #111322;
+  height: 5160px;
+  overflow-y: overlay;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #030910;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8c98c088;
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #8c98c041;
 }
