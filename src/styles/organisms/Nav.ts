@@ -8,7 +8,7 @@ interface NavAttributes {
 
 export const Nav = styled.nav<NavAttributes>`
   width: 100%;
-  height: 100px;
+  height: 80px;
   transition: background-color 0.3s, top 0.3s ease-in;
   background-color: ${(p) =>
     p.activeBackground === "true" ? p.theme.backgroundOpacity : "transparent"};
@@ -33,18 +33,32 @@ export const Nav = styled.nav<NavAttributes>`
   }
 `;
 
-export const NavLinks = styled.div``;
+export const NavLinks = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+`;
 
 export const NavLink = styled(BaseLink)`
   color: ${(p) => p.theme.lightblue};
-  width: 170px;
   height: 28px;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 30px;
   margin-right: 32px;
   text-align: center;
+  display: block;
+  transition: transform 0.3s;
+  @media screen and (min-width: 1281px) {
+    font-size: 22px;
+    margin-right: 32px;
+  };
   &:visited {
     color: ${(p) => p.theme.lightblue};
-  }
+  };
+  &:hover {
+    transform: scale(1.05);
+    color: #DDDDDD;
+  };
 `;

@@ -13,9 +13,9 @@ const NavComponent: React.FC<NavProps> = () => {
     <Nav activeBackground={activeBackground} isShown={isShown}>
       <Logo />
       <NavLinks>
-        <NavLink to="#">Mis trabajos</NavLink>
-        <NavLink to="#">Herramientas</NavLink>
-        <NavLink to="#">Sobre mi</NavLink>
+        <NavLink to="#jobs">Mis trabajos</NavLink>
+        <NavLink to="#tools">Herramientas</NavLink>
+        <NavLink to="#about">Sobre mi</NavLink>
       </NavLinks>
       <Button path="#curriculum" text="Curriculum" />
     </Nav>
