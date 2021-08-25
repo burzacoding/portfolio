@@ -16,6 +16,7 @@ interface ButtonProps {
   fontSize: number;
 }
 
+
 const ButtonStyled = styled.button<ButtonProps>`
   width: ${(p) => p.width + "px"};
   height: ${(p) => p.height + "px"};
@@ -23,11 +24,12 @@ const ButtonStyled = styled.button<ButtonProps>`
   border-radius: 8px;
   border: 2px solid ${p => p.theme.lightblue};
   transform-origin: 50% 50%;
-  transition: transform 0.2s;
+  transition: transform 0.3s, background-color 0.3s;
   font-size: ${(p) => p.fontSize + "px"};
   cursor: pointer;
   &:hover {
     transform: scale(1.025);
+    background-color: #8c98c024;
   }
 `;
 
@@ -44,7 +46,7 @@ const Button: React.FC<buttonProps> = ({
   path,
   width = 186,
   height = 50,
-  fontSize = 24,
+  fontSize = 24
 }) => {
   return (
     <ButtonStyled width={width} height={height} fontSize={fontSize}>

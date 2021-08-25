@@ -1,16 +1,15 @@
 import Nav from "./Components/Organisms/Nav";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./Styles";
-import { EllipseWrapper } from "./styles/Ellipse";
-import Ellipse from "./Components/Molecules/Ellipse";
+import BottomNavs from "./Components/Organisms/BottomNavs";
+import Decorations from "./Components/Organisms/Decorations";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <EllipseWrapper size={240}>
-        <Ellipse />
-      </EllipseWrapper>
+      <Decorations />
       <Nav />
+      <BottomNavs />
     </ThemeProvider>
   );
 }

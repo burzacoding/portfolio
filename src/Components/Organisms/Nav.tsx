@@ -1,13 +1,10 @@
 import { useActiveBackground } from "../../hooks/Nav";
-import { Nav, NavLinks, NavLink } from "../../styles/organisms/Nav";
+import { Nav, NavLinks, NavLink, ButtonWrapper } from "../../styles/organisms/Nav";
 import Button from "../Molecules/Button";
 import Logo from "../Molecules/Logo";
 
-export interface NavProps {}
-
-const NavComponent: React.FC<NavProps> = () => {
-
-  const {activeBackground, isShown} = useActiveBackground();
+const NavComponent = () => {
+  const { activeBackground, isShown } = useActiveBackground();
 
   return (
     <Nav activeBackground={activeBackground} isShown={isShown}>
@@ -17,7 +14,15 @@ const NavComponent: React.FC<NavProps> = () => {
         <NavLink to="#tools">Herramientas</NavLink>
         <NavLink to="#about">Sobre mi</NavLink>
       </NavLinks>
-      <Button path="#curriculum" text="Curriculum" />
+      <ButtonWrapper>
+        <Button
+          path="#curriculum"
+          text="Curriculum"
+          height={44}
+          width={160}
+          fontSize={20}
+        />
+      </ButtonWrapper>
     </Nav>
   );
 };

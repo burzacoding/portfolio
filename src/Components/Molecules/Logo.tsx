@@ -12,7 +12,7 @@ display: block;
 transition: transform 0.3s;
 `
 const LogoSpanDesktop = styled(LogoSpan)`
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 920px) {
    display: none;
   };
   &:hover {
@@ -21,7 +21,7 @@ const LogoSpanDesktop = styled(LogoSpan)`
 `;
 
 const LogoSpanMobile = styled(LogoSpan)`
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 921px) {
    display: none;
   };
 `

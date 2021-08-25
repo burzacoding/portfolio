@@ -9,6 +9,7 @@ body {
   background-color: #111322;
   height: 5160px;
   overflow-y: overlay;
+  overflow-x: hidden;
 }
 
 /* width */

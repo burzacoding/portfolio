@@ -8,4 +8,5 @@ interface EllipseWrapperInterface {
 export const EllipseWrapper = styled.div<EllipseWrapperInterface>`
   width: ${p => p.size}px;
   height: ${p => p.size}px;
+  ${p => p.extraCss}
 `
