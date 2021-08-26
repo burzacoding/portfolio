@@ -18,8 +18,6 @@ const DesktopNavComponent = () => {
         <Button
           path="/curriculum.pdf"
           text="Curriculum"
-          height={44}
-          width={160}
           fontSize={20}
           isLink={false}
         />

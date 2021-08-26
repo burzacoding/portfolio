@@ -1,7 +1,6 @@
 import { ExternalLink, Separator, SvgWrapper } from "../../styles/Index";
 import {
   BottomNavColumn,
-  BottomNavWrapper,
   EmailSpan,
   Line,
 } from "../../styles/organisms/Nav";
@@ -14,8 +13,8 @@ const BottomNavs = () => {
   const theme = useTheme();
 
   return (
-    <BottomNavWrapper>
-      <BottomNavColumn>
+    <>
+      <BottomNavColumn position="left">
         <ExternalLink
           href="https://github.com/burzacoding"
           target="_blank"
@@ -47,11 +46,11 @@ const BottomNavs = () => {
         </ExternalLink>
         <Line lineHeight={124} />
       </BottomNavColumn>
-      <BottomNavColumn>
+      <BottomNavColumn position="right">
         <EmailSpan href="mailto:burzacoding@gmail.com" target="_blank" rel="noreferrer">burzacoding@gmail.com</EmailSpan>
         <Line lineHeight={84} />
       </BottomNavColumn>
-    </BottomNavWrapper>
+    </>
   );
 };
 

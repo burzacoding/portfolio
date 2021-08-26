@@ -3,7 +3,6 @@ import { ButtonWrapper, NavLinkMobile, NavLinksMobile } from "../../styles/organ
 import Button from "../Molecules/Button";
 import { isDrawerShownOption, isShownInterface } from "./Nav";
 import styled from "styled-components";
-// import { useActiveBackground } from "../../hooks/Nav";
 
 const Drawer = styled.div<isShownInterface>`
   padding-top: 50%;
@@ -36,8 +35,6 @@ const Drawer = styled.div<isShownInterface>`
 
 const MobileDrawer: React.FC<isDrawerShownOption> = ({ drawerShown }) => {
 
-  // const { prevPosition } = useActiveBackground();
-
   return (
     <Drawer drawerShown={drawerShown}>
       <NavLinksMobile>
@@ -49,8 +46,6 @@ const MobileDrawer: React.FC<isDrawerShownOption> = ({ drawerShown }) => {
         <Button
           path="/curriculum.pdf"
           text="Curriculum"
-          height={44}
-          width={160}
           fontSize={20}
           isLink={false}
         />

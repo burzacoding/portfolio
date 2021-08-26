@@ -5,22 +5,18 @@ import { Link } from 'react-router-dom'
 interface buttonProps {
   text: string;
   path: string;
-  width?: number;
-  height?: number;
   fontSize?: number;
   isLink?: boolean;
 }
 
 interface ButtonProps {
-  width: number;
-  height: number;
   fontSize: number;
 }
 
 
 const ButtonStyled = styled.a<ButtonProps>`
-  width: ${(p) => p.width + "px"};
-  height: ${(p) => p.height + "px"};
+  width: 160px;
+  height: 44px;
   background-color: transparent;
   border-radius: 8px;
   border: 2px solid ${(p) => p.theme.lightblue};
@@ -37,8 +33,7 @@ const ButtonStyled = styled.a<ButtonProps>`
   &:visited {
     color: ${(p) => p.theme.lightblue};
   }
-  &:hover {
-    transform: scale(1.025);
+  &:hover { 
     background-color: #8c98c024;
   }
 `;
@@ -46,16 +41,12 @@ const ButtonStyled = styled.a<ButtonProps>`
 const Button: React.FC<buttonProps> = ({
   text,
   path,
-  width = 186,
-  height = 50,
   fontSize = 24,
   isLink = true,
 }) => {
   if (isLink) {
     return (
       <ButtonStyled
-        width={width}
-        height={height}
         fontSize={fontSize}
         to={path}
         as={Link}
@@ -66,8 +57,6 @@ const Button: React.FC<buttonProps> = ({
   } else {
     return (
       <ButtonStyled
-        width={width}
-        height={height}
         fontSize={fontSize}
         href={path}
         target="_blank"
