@@ -26,5 +26,5 @@ export const useActiveBackground = () => {
     };
   }, []);
 
-  return { activeBackground, isShown };
+  return { activeBackground, isShown, prevPosition };
 };

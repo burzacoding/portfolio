@@ -13,7 +13,6 @@ interface Lineinterface {
 export const Nav = styled.nav<NavAttributes>`
   width: 100%;
   height: 80px;
-  transition: background-color 0.3s, top 0.3s ease-out;
   background-color: ${(p) =>
     p.activeBackground === "true" ? p.theme.backgroundOpacity : "transparent"};
   display: flex;
@@ -24,6 +23,7 @@ export const Nav = styled.nav<NavAttributes>`
   justify-content: space-between;
   padding: 0 32px;
   color: ${(p) => p.theme.fontOne};
+  transition: background-color 0.3s, top 0.3s ease-out;
   &::after {
     content: "";
     position: absolute;
@@ -35,6 +35,20 @@ export const Nav = styled.nav<NavAttributes>`
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.25);
     transition: opacity 0.3s ease-in-out;
   }
+`;
+
+export const DesktopNav = styled(Nav)`
+  display: none;
+  @media screen and (min-width: 769px) {
+    display: fixed;
+  } ;
+`;
+
+export const MobileNav = styled(Nav)`
+  height: 70px;
+  @media screen and (min-width: 769px) {
+    display: none;
+  } ;
 `;
 
 export const BottomNavWrapper = styled.div`
@@ -86,9 +100,13 @@ export const NavLinks = styled.div`
   margin-left: auto;
 `;
 
-export const ButtonWrapper = styled.div`
+export const NavLinksMobile = styled(NavLinks)`
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: unset;
+`;
 
-`
+export const ButtonWrapper = styled.div``;
 
 export const NavLink = styled(BaseLink)`
   color: ${(p) => p.theme.lightblue};

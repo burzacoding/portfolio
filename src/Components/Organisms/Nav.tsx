@@ -1,31 +1,27 @@
-import { useActiveBackground } from "../../hooks/Nav";
-import { Nav, NavLinks, NavLink, ButtonWrapper } from "../../styles/organisms/Nav";
-import Button from "../Molecules/Button";
-import Logo from "../Molecules/Logo";
+import { useState } from "react";
+import DesktopNavComponent from "./DesktopNav"
+import MobileDrawer from "./MobileDrawer";
+import MobileNavComponent from "./MobileNav"
 
-const NavComponent = () => {
-  const { activeBackground, isShown } = useActiveBackground();
+export interface isDrawerShownOption {
+  drawerShown: boolean;
+  setDrawerShown: React.Dispatch<React.SetStateAction<boolean>>
+}
 
+export interface isShownInterface {
+  drawerShown: boolean;
+}
+
+const Nav = () => {
+
+  const [drawerShown, setDrawerShown] = useState(false);
   return (
-    <Nav activeBackground={activeBackground} isShown={isShown}>
-      <Logo />
-      <NavLinks>
-        <NavLink to="#jobs">Mis trabajos</NavLink>
-        <NavLink to="#tools">Herramientas</NavLink>
-        <NavLink to="#about">Sobre mi</NavLink>
-      </NavLinks>
-      <ButtonWrapper>
-        <Button
-          path="/curriculum.pdf"
-          text="Curriculum"
-          height={44}
-          width={160}
-          fontSize={20}
-          isLink={false}
-        />
-      </ButtonWrapper>
-    </Nav>
-  );
-};
+    <>
+      <DesktopNavComponent />
+      <MobileNavComponent drawerShown={drawerShown} setDrawerShown={setDrawerShown} />
+      <MobileDrawer drawerShown={drawerShown} setDrawerShown={setDrawerShown}/>
+    </>
+  )
+}
 
-export default NavComponent;
+export default Nav
