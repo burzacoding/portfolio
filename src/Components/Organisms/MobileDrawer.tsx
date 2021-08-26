@@ -1,25 +1,38 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { ButtonWrapper, NavLinksMobile } from "../../styles/organisms/Nav";
+import { ButtonWrapper, NavLinkMobile, NavLinksMobile } from "../../styles/organisms/Nav";
 import Button from "../Molecules/Button";
 import { isDrawerShownOption, isShownInterface } from "./Nav";
 import styled from "styled-components";
 import { useActiveBackground } from "../../hooks/Nav";
 
 const Drawer = styled.div<isShownInterface>`
-  padding-top: 80px;
+  padding-top: 50%;
   height: 120%;
   width: 70%;
-  /* background-color: ${(p) => p.theme.background}; */
-  background-color: aquamarine;
+  background-color: ${(p) => p.theme.background};
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: fixed;
   top: 0;
   bottom: 0;
-  right: ${p => p.drawerShown ? '0' : '-70%'};
+  z-index: 1;
+  right: ${p => p.drawerShown ? '0' : '-75%'};
   transition: right 0.25s;
-  z-index: -1;
+  pointer-events: auto;
+  &::after {
+    position: absolute;
+    top: 0;
+    content:  "";
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 16px #0000007f;
+  };
+  @media screen and (min-width: 769px) {
+   display: none;
+  };
 `;
 
 const MobileDrawer: React.FC<isDrawerShownOption> = ({ drawerShown }) => {
@@ -29,9 +42,9 @@ const MobileDrawer: React.FC<isDrawerShownOption> = ({ drawerShown }) => {
   return (
     <Drawer drawerShown={drawerShown}>
       <NavLinksMobile>
-        <NavLink to="#jobs">Mis trabajos</NavLink>
-        <NavLink to="#tools">Herramientas</NavLink>
-        <NavLink to="#about">Sobre mi</NavLink>
+        <NavLinkMobile to="#jobs">Mis trabajos</NavLinkMobile>
+        <NavLinkMobile to="#tools">Herramientas</NavLinkMobile>
+        <NavLinkMobile to="#about">Sobre mi</NavLinkMobile>
       </NavLinksMobile>
       <ButtonWrapper>
         <Button

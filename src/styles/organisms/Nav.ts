@@ -46,6 +46,7 @@ export const DesktopNav = styled(Nav)`
 
 export const MobileNav = styled(Nav)`
   height: 70px;
+  z-index: 1;
   @media screen and (min-width: 769px) {
     display: none;
   } ;
@@ -91,6 +92,7 @@ export const BottomNavColumn = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 32px;
 `;
 
 export const NavLinks = styled.div`
@@ -130,3 +132,13 @@ export const NavLink = styled(BaseLink)`
     color: #dddddd;
   }
 `;
+
+export const NavLinkMobile = styled(NavLink)`
+  text-align: center;
+  margin-bottom: 32px;
+  margin-right: 0;
+  font-size: 24px;
+  &:active {
+    color: #FFFFFF;
+  };
+`

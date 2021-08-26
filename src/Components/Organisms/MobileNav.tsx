@@ -8,10 +8,14 @@ import {
 } from "../../styles/organisms/Nav";
 import Logo from "../Molecules/Logo";
 import Hamburguer from "../SVG/Hamburguer";
+import MobileDrawer from "./MobileDrawer";
 import { isDrawerShownOption, isShownInterface } from "./Nav";
 
 
 const SVGHandler = styled.div<isShownInterface>`
+  position: relative;
+  z-index: 3;
+  user-select: none;
   svg > g > #Top {
     transition: transform 0.2s;
     transform: ${(p) => (p.drawerShown ? "translateX(-12px)" : "none")};
@@ -36,6 +40,8 @@ const MobileNavComponent: React.FC<isDrawerShownOption> = ({setDrawerShown, draw
           <Hamburguer />
         </SvgWrapper>
       </SVGHandler>
+      
+    <MobileDrawer drawerShown={drawerShown} setDrawerShown={setDrawerShown}/>
     </MobileNav>
   );
 };

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import DesktopNavComponent from "./DesktopNav"
-import MobileDrawer from "./MobileDrawer";
 import MobileNavComponent from "./MobileNav"
 
 export interface isDrawerShownOption {
@@ -19,7 +18,6 @@ const Nav = () => {
     <>
       <DesktopNavComponent />
       <MobileNavComponent drawerShown={drawerShown} setDrawerShown={setDrawerShown} />
-      <MobileDrawer drawerShown={drawerShown} setDrawerShown={setDrawerShown}/>
     </>
   )
 }
