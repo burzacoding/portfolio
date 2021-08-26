@@ -43,7 +43,7 @@ const MobileNavComponent: React.FC<isDrawerShownOption> = ({setDrawerShown, draw
     <MobileNav activeBackground={activeBackground} isShown={isShown} >
       <Logo />
       <SVGHandler drawerShown={drawerShown}>
-        <SvgWrapper size={60} color={theme.accent} onClick={handleShown}>
+        <SvgWrapper size={54} color={theme.accent} onClick={handleShown}>
           <Hamburguer />
         </SvgWrapper>
       </SVGHandler>

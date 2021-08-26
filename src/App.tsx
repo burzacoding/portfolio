@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "./Styles";
 import BottomNavs from "./Components/Organisms/BottomNavs";
 import Decorations from "./Components/Organisms/Decorations";
+import Home from "./Components/Sections/Home";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Decorations />
       <Nav />
       <BottomNavs />
+      <Home />
     </ThemeProvider>
   );
 }
