@@ -1,10 +1,9 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import { ButtonWrapper, NavLinkMobile, NavLinksMobile } from "../../styles/organisms/Nav";
 import Button from "../Molecules/Button";
 import { isDrawerShownOption, isShownInterface } from "./Nav";
 import styled from "styled-components";
-import { useActiveBackground } from "../../hooks/Nav";
+// import { useActiveBackground } from "../../hooks/Nav";
 
 const Drawer = styled.div<isShownInterface>`
   padding-top: 50%;
@@ -18,7 +17,7 @@ const Drawer = styled.div<isShownInterface>`
   top: 0;
   bottom: 0;
   z-index: 1;
-  right: ${p => p.drawerShown ? '0' : '-75%'};
+  right: ${p => p.drawerShown ? '-5px' : '-75%'};
   transition: right 0.25s;
   pointer-events: auto;
   &::after {
@@ -37,7 +36,7 @@ const Drawer = styled.div<isShownInterface>`
 
 const MobileDrawer: React.FC<isDrawerShownOption> = ({ drawerShown }) => {
 
-  const { prevPosition } = useActiveBackground();
+  // const { prevPosition } = useActiveBackground();
 
   return (
     <Drawer drawerShown={drawerShown}>

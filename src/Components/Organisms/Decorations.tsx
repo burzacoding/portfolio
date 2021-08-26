@@ -6,13 +6,13 @@ const Decorations = () => {
     <>
       <EllipseWrapper
         size={396}
-        extraCss="position: absolute; top: -128px; right: -128px;z-index: -2;"
+        extraCss="top: -128px; right: -128px;"
       >
         <Ellipse />
       </EllipseWrapper>
       <EllipseWrapper
         size={606}
-        extraCss="position: absolute; left: -128px; top: 660px;z-index: -2;"
+        extraCss="left: -128px; top: 660px;"
       >
         <Ellipse />
       </EllipseWrapper>

@@ -1,5 +1,6 @@
 
 import React from "react";
+import { useEffect } from "react";
 import styled, { useTheme } from "styled-components";
 import { useActiveBackground } from "../../hooks/Nav";
 import { SvgWrapper } from "../../styles/Index";
@@ -31,6 +32,12 @@ const MobileNavComponent: React.FC<isDrawerShownOption> = ({setDrawerShown, draw
   const { activeBackground, isShown } = useActiveBackground()
 
   const theme = useTheme();
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      setDrawerShown(false)
+    })
+  }, [setDrawerShown])
 
   return (
     <MobileNav activeBackground={activeBackground} isShown={isShown} >
