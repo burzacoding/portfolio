@@ -10,6 +10,10 @@ interface Lineinterface {
   lineHeight: number;
 }
 
+interface positionInterface {
+  position: "left" | "right";
+}
+
 export const Nav = styled.nav<NavAttributes>`
   width: 100%;
   height: 80px;
@@ -52,20 +56,6 @@ export const MobileNav = styled(Nav)`
   } ;
 `;
 
-export const BottomNavWrapper = styled.div`
-  position: fixed;
-  width: 100%;
-  max-width: 100%;
-  bottom: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 0 58px;
-  @media screen and (max-width: 768px) {
-    display: none;
-  } ;
-`;
-
 export const EmailSpan = styled.a`
   display: block;
   transition: transform 0.2s, color 0.2s;
@@ -88,11 +78,18 @@ export const Line = styled.div<Lineinterface>`
   background-color: ${(p) => p.theme.fontThree};
 `;
 
-export const BottomNavColumn = styled.div`
+export const BottomNavColumn = styled.div<positionInterface>`
+  position: fixed;
+  bottom: 0;
+  left: ${(p) => (p.position === "left" ? "58px" : "unset")};
+  right: ${(p) => (p.position === "right" ? "58px" : "unset")};
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 32px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  } ;
 `;
 
 export const NavLinks = styled.div`
@@ -139,6 +136,6 @@ export const NavLinkMobile = styled(NavLink)`
   margin-right: 0;
   font-size: 24px;
   &:active {
-    color: #FFFFFF;
-  };
-`
+    color: #ffffff;
+  }
+`;
