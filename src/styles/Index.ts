@@ -10,7 +10,7 @@ export const BaseLink = styled(Link)`
 `;
 
 interface SvgWrapperInterface {
-  size: number,
+  size?: number,
   color: string,
 }
 interface SeparatorInterface {
@@ -19,8 +19,8 @@ interface SeparatorInterface {
 }
 
 export const SvgWrapper = styled.div<SvgWrapperInterface>`
-  height: ${p => p.size+ 'px'};
-  width: ${p => p.size+ 'px'};
+  height: ${p => p.size ? p.size + 'px' : "100%"};
+  width: ${p => p.size ? p.size + 'px' : "100%"};
   svg {
     fill: ${p => p.color};
     transition: fill 0.3s;

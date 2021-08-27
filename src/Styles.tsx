@@ -16,7 +16,7 @@ export const theme: DefaultTheme = {
   accent: '#2568EB',
   lightblue: '#8C98C0',
   background: '#111322',
-  backgroundOpacity: '#1113227d',
+  backgroundOpacity: '#111322da',
   fontOne: '#A8A8A8',
   fontTwo: '#BCBCBC',
   fontThree: '#757575',

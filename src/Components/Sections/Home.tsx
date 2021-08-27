@@ -14,9 +14,8 @@ const Home = () => {
       <NameTitle>César Pintos</NameTitle>
       <AccentTitle>desarrollo software a medida.</AccentTitle>
       <Subtitle>
-        Soy un desarrollador web con experiencia desarrollando sistemas robustos
-        y seguros para todo tipos de clientes, desde pequeños emprendedores a
-        empresas multinacionales.
+        Soy un desarrollador web con experiencia desarrollando desde paginas ecommerce hasta sistemas robustos
+        y seguros a medida para todo tipo de clientes.
       </Subtitle>
       <ButtonsWrapper>
         <Button text="Ver trabajos" path="#jobs" fontSize={20} />
