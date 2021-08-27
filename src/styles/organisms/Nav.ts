@@ -106,7 +106,10 @@ export const NavLinksMobile = styled(NavLinks)`
   margin-left: unset;
 `;
 
-export const ButtonWrapper = styled.div``;
+export const ButtonWrapper = styled.div`
+  height: 42px;
+  width: 160px;
+`;
 
 export const NavLink = styled(BaseLink)`
   color: ${(p) => p.theme.lightblue};
@@ -142,5 +145,9 @@ export const NavLinkMobile = styled(NavLink)`
   @media screen and (min-width: 410px) {
     font-size: 20px;
     margin-bottom: 20px;
+  } ;
+  @media screen and (min-width: 480px) {
+    font-size: 26px;
+    margin-bottom: 24px;
   } ;
 `;

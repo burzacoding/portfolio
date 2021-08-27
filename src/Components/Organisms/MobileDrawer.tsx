@@ -1,10 +1,11 @@
 import React from "react";
-import { ButtonWrapper, NavLinkMobile, NavLinksMobile } from "../../styles/organisms/Nav";
+import { NavLinkMobile, NavLinksMobile } from "../../styles/organisms/Nav";
 import Button from "../Molecules/Button";
 import { isDrawerShownOption, isShownInterface } from "./Nav";
 import styled from "styled-components";
 
 const Drawer = styled.div<isShownInterface>`
+  padding: 0 15%;
   padding-top: 50%;
   height: 120%;
   width: 70%;
@@ -42,14 +43,12 @@ const MobileDrawer: React.FC<isDrawerShownOption> = ({ drawerShown }) => {
         <NavLinkMobile to="#tools">Herramientas</NavLinkMobile>
         <NavLinkMobile to="#about">Sobre mi</NavLinkMobile>
       </NavLinksMobile>
-      <ButtonWrapper>
         <Button
           path="/curriculum.pdf"
           text="Curriculum"
           fontSize={20}
           isLink={false}
         />
-      </ButtonWrapper>
     </Drawer>
   );
 };

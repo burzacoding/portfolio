@@ -22,6 +22,10 @@ const SVGHandler = styled.div<isShownInterface>`
   @media screen and (min-width: 410px) {
     width: 48px;
     height: 48px;
+  }
+  @media screen and (min-width: 520px) {
+    width: 56px;
+    height: 56px;
   } ;
 `;
 
