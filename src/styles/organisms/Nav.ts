@@ -42,6 +42,7 @@ export const Nav = styled.nav<NavAttributes>`
 `;
 
 export const DesktopNav = styled(Nav)`
+  z-index: 1;
   display: none;
   @media screen and (min-width: 769px) {
     display: fixed;
@@ -109,6 +110,11 @@ export const NavLinksMobile = styled(NavLinks)`
 export const ButtonWrapper = styled.div`
   height: 42px;
   width: 160px;
+`;
+
+export const ButtonWrapperNav = styled.div`
+  width: 80%;
+  height: 42px;
 `;
 
 export const NavLink = styled(BaseLink)`

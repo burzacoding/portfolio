@@ -4,6 +4,9 @@ import { theme } from "./Styles";
 import BottomNavs from "./Components/Organisms/BottomNavs";
 import Decorations from "./Components/Organisms/Decorations";
 import Home from "./Components/Sections/Home";
+import SectionSeparator from "./Components/Molecules/SectionSeparator";
+import { ContentWrapper } from "./styles/Index";
+import Works from "./Components/Sections/Works";
 
 function App() {
   return (
@@ -11,7 +14,11 @@ function App() {
       <Decorations />
       <Nav />
       <BottomNavs />
-      <Home />
+      <ContentWrapper>
+        <Home />
+        <Works />
+        <SectionSeparator text="Sobre mí" position="right" id="#about" />
+      </ContentWrapper>
     </ThemeProvider>
   );
 }

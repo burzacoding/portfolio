@@ -1,37 +1,38 @@
 import styled from "styled-components";
 
-export const SectionWrapper = styled.div`
-  margin: auto;
-  margin-top: 124px;
+export const SectionWrapper = styled.section`
+  margin: 0 auto;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 0 32px;
+  justify-content: center;
   overflow-x: hidden;
   @media screen and (min-width: 410px) {
     max-width: 610px;
   }
   @media screen and (min-width: 768px) {
-    padding: 0 124px;
     max-width: 1428px;
-    margin: 212px auto;
-  } ;
+  }
+  @media (max-width: 480px) and (min-height: 700px) {
+    padding-bottom: 10vh;
+  }
 `;
 
 export const AccentTitle = styled.p`
   color: ${(p) => p.theme.accent};
   font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 24px;
+  line-height: 28px;
   @media screen and (min-width: 410px) {
-    font-size: 24px;
+    font-size: 28px;
     line-height: 40px;
   }
   @media screen and (min-width: 768px) {
-    font-size: 36px;
+    font-size: 40px;
     line-height: 48px;
   }
   @media screen and (min-width: 1366px) {
-    font-size: 48px;
+    font-size: 52px;
     line-height: 60px;
   } ;
 `;
@@ -56,18 +57,18 @@ export const Subtitle = styled.p`
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
-  margin-top: 12px;
+  margin-top: 16px;
   margin-bottom: 16px;
   @media screen and (min-width: 410px) {
     margin-bottom: 0;
     font-size: 18px;
     line-height: 22px;
-    margin-top: 8px;
+    margin-top: 24px;
   }
   @media screen and (min-width: 768px) {
     font-size: 24px;
     line-height: 36px;
-    margin-top: 24px;
+    margin-top: 32px;
   } ;
 `;
 
@@ -78,6 +79,7 @@ export const ButtonsWrapper = styled.div`
   gap: 8px;
   align-items: center;
   @media screen and (min-width: 410px) {
+    grid-template-rows: 54px;
     grid-template-columns: 1fr 1fr;
     display: grid;
     margin-top: 24px;
