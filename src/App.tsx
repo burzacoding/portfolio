@@ -7,6 +7,7 @@ import Home from "./Components/Sections/Home";
 import SectionSeparator from "./Components/Molecules/SectionSeparator";
 import { ContentWrapper } from "./styles/Index";
 import Works from "./Components/Sections/Works";
+import AboutMe from "./Components/Sections/AboutMe";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       <ContentWrapper>
         <Home />
         <Works />
-        <SectionSeparator text="Sobre mí" position="right" id="#about" />
+        <AboutMe />
       </ContentWrapper>
     </ThemeProvider>
   );

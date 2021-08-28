@@ -67,7 +67,7 @@ export const DetailsContainer = styled.div<imageProps & side>`
     background: transparent;
     text-align: ${(p) => p.position};
     grid-area: ${(p) =>
-      p.position === "left" ? "-1 / 1 / 1 / 9" : "1 / 5 / 1 / 13"};
+      p.position === "left" ? "-1 / 1 / 1 / 7" : "1 / 7 / 1 / 13"};
     &::nth-child(n + 1) {
       grid-column: 5 / -1;
       text-align: right;
@@ -84,17 +84,8 @@ export const Title = styled.h3`
     font-size: 36px;
     line-height: 48px;
   }
-  @media screen and (min-width: 768px) {
-    font-size: 48px;
-    line-height: 60px;
-  }
-  @media screen and (min-width: 1024px) {
-    font-size: 48px;
-    line-height: 60px;
-  }
   @media screen and (min-width: 1366px) {
     font-size: 48px;
-    line-height: 60px;
   } ;
 `;
 

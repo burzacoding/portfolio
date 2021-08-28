@@ -19,7 +19,7 @@ export const PlatubiJob: JobInterface = {
     "CoinMarketCap API",
     "Zustand"
   ],
-  title: "Platubi",
+  title: "Fullstack - Platubi",
   imgSource: "/assets/PlatubiDashboard.png",
   gitLink: "https://github.com/burzacoding/platubi",
   liveSiteLink: "https://platubi.com",
@@ -35,7 +35,7 @@ export const RESTJob: JobInterface = {
     "Express",
     "MongoDB",
   ],
-  title: "API REST",
+  title: "Backend - API REST",
   imgSource: "/assets/restapi.png",
   gitLink: "https://github.com/burzacoding/rest-server",
   position: "left"
