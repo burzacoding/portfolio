@@ -10,16 +10,16 @@ const DesktopNavComponent = () => {
     <DesktopNav activeBackground={activeBackground} isShown={isShown}>
       <Logo />
       <NavLinks>
-        <NavLink to="#jobs">Mis trabajos</NavLink>
-        <NavLink to="#tools">Herramientas</NavLink>
-        <NavLink to="#about">Sobre mi</NavLink>
+        <NavLink href="#jobs">Mis trabajos</NavLink>
+        <NavLink href="#tools">Herramientas</NavLink>
+        <NavLink href="#about">Sobre mi</NavLink>
       </NavLinks>
       <ButtonWrapper>
         <Button
           path="/curriculum.pdf"
           text="Curriculum"
           fontSize={20}
-          isLink={false}
+          isExternal={true}
         />
       </ButtonWrapper>
     </DesktopNav>

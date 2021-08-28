@@ -117,7 +117,7 @@ export const ButtonWrapperNav = styled.div`
   height: 42px;
 `;
 
-export const NavLink = styled(BaseLink)`
+export const NavLink = styled.a`
   color: ${(p) => p.theme.lightblue};
   height: 28px;
   font-weight: 500;
@@ -126,6 +126,7 @@ export const NavLink = styled(BaseLink)`
   margin-right: 32px;
   text-align: center;
   display: block;
+  text-decoration: none;
   transition: transform 0.3s;
   @media screen and (min-width: 1281px) {
     font-size: 22px;

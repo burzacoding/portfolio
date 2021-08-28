@@ -42,16 +42,16 @@ const MobileDrawer: React.FC<isDrawerShownOption> = ({ drawerShown }) => {
   return (
     <Drawer drawerShown={drawerShown}>
       <NavLinksMobile>
-        <NavLinkMobile to="#jobs">Mis trabajos</NavLinkMobile>
-        <NavLinkMobile to="#tools">Herramientas</NavLinkMobile>
-        <NavLinkMobile to="#about">Sobre mi</NavLinkMobile>
+        <NavLinkMobile href="#jobs">Mis trabajos</NavLinkMobile>
+        <NavLinkMobile href="#tools">Herramientas</NavLinkMobile>
+        <NavLinkMobile href="#about">Sobre mi</NavLinkMobile>
       </NavLinksMobile>
       <ButtonWrapperNav>
         <Button
           path="/curriculum.pdf"
           text="Curriculum"
           fontSize={20}
-          isLink={false}
+          isExternal={true}
         />
       </ButtonWrapperNav>
     </Drawer>

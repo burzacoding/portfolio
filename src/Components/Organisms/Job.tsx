@@ -37,7 +37,7 @@ const Jobs: React.FC<JobsProps> = ({ obj }) => {
 
   return (
     <JobContainer>
-      <ImageContainer url={imgSource} position={position} />
+      <ImageContainer url={imgSource} position={position} href={gitLink} target="_blank" rel="noreferrer" />
       <DetailsContainer url={imgSource} position={position}>
         <Title>{title}</Title>
         <Description>{description}</Description>

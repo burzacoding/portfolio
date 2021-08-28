@@ -6,7 +6,7 @@ interface buttonProps {
   text: string;
   path: string;
   fontSize?: number;
-  isLink?: boolean;
+  isExternal?: boolean;
 }
 
 interface ButtonProps {
@@ -51,11 +51,11 @@ const Button: React.FC<buttonProps> = ({
   text,
   path,
   fontSize = 24,
-  isLink = true,
+  isExternal = true,
 }) => {
-  if (isLink) {
+  if (!isExternal) {
     return (
-      <ButtonStyled fontSize={fontSize} to={path} as={Link}>
+      <ButtonStyled fontSize={fontSize} href={path}>
         {text}
       </ButtonStyled>
     );

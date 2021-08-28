@@ -7,8 +7,8 @@ import Jobs from "../Organisms/Job";
 
 const Works = () => {
   return (
-    <JobSectionContainer>
-      <SectionSeparator text="Mis trabajos" position="left" id="#jobs" />
+    <JobSectionContainer id="jobs">
+      <SectionSeparator text="Mis trabajos" position="left" />
       <Separator height={36} width={16} />
       <Jobs obj={PlatubiJob} />
       <Separator height={36} width={16} />

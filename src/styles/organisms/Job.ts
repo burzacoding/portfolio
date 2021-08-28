@@ -22,11 +22,12 @@ export const JobContainer = styled.article`
   } ;
 `;
 
-export const ImageContainer = styled.div<imageProps & side>`
+export const ImageContainer = styled.a<imageProps & side>`
   display: none;
   @media screen and (min-width: 768px) {
     height: auto;
     width: 100%;
+    position: relative;
     overflow: hidden;
     aspect-ratio: 16/9;
     min-height: 200px;
@@ -36,9 +37,15 @@ export const ImageContainer = styled.div<imageProps & side>`
     border-radius: 6px;
     background-image: url(${(p) => p.url});
     background-position: center;
-    background-size: cover;
+    background-size: 110%;
     background-repeat: no-repeat;
     display: block;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-size 0.2s;
+    &:hover {
+      background-size: 115%;
+    }
   } ;
 `;
 

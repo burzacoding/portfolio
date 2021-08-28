@@ -14,12 +14,18 @@ const Home = () => {
       <NameTitle>César Pintos</NameTitle>
       <AccentTitle>desarrollo software a medida.</AccentTitle>
       <Subtitle>
-        Soy un desarrollador web con experiencia desarrollando desde paginas ecommerce hasta sistemas robustos
-        y seguros a medida para todo tipo de clientes.
+        Soy un desarrollador web con experiencia desarrollando desde paginas
+        ecommerce hasta sistemas robustos y seguros a medida para todo tipo de
+        clientes.
       </Subtitle>
       <ButtonsWrapper>
-        <Button text="Ver trabajos" path="#jobs" fontSize={20} />
-        <Button text="Curriculum" path="/curriculum.pdf" isLink={false} fontSize={20} />
+        <Button
+          text="Ver trabajos"
+          path="#jobs"
+          fontSize={20}
+          isExternal={false}
+        />
+        <Button text="Curriculum" path="/curriculum.pdf" fontSize={20} />
       </ButtonsWrapper>
     </SectionWrapper>
   );
